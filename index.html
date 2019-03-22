@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html amp lang="en"> <!--or <html amp lang="en"> -->
+<head>
+    <meta charset="utf-8" />
+    <link rel="canonical" href="article.amp.html">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+    <title>Mercurie Digital Starter Kit</title>
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style>
+    <noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+    <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style apm-custom>
+        body{
+            font-family: sans-serif;
+            font-size: 16px;
+            overflow-x: hidden;
+        }
+        a{
+            outline: none;
+            color: inherit;
+        }
+        hr{
+            color: inherit;
+            margin: 20px;
+        }
+        ul{
+            padding: 0;
+            margin: 0;
+        }
+        li{
+            list-style-type: none;
+            padding: 0;
+            margin: 5px 0;
+        }
+        h1{
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 1.2;
+            padding:0 20px;
+            margin: 30px auto;
+            text-shadow: 0 1px #0000ffa8;
+            color: rgb(54,74,143); 
+        }
+        h2{
+            text-align: center;
+            text-transform: capitalize;
+            line-height: 1.2;
+            padding:0 20px;
+            margin: 30px auto;
+            text-shadow: 0 1px #0000ffa8;
+            color: rgb(54,74,143);
+
+        }
+        h3{
+            padding:0 20px;
+            margin: 20px auto;
+        }
+        button{
+            padding:0 25px;
+            outline: none;
+            background-color: inherit;
+            border: none;
+        }
+        .sidebar{
+            background-color: #fff;
+            padding: 0 22px;
+            height: 92vh;
+            overflow: hidden;
+            margin-top: 8vh;   
+            text-align: center;         
+        }
+        .sidebar li{
+            margin: 50px 0px;
+        }
+        .splashScreen{
+            height: 100vh;
+            position: relative;
+        }
+        .splashScreen_header {
+            height: 8vh;
+            position: fixed;
+            z-index: 1001;
+            font-weight: 600;
+            width: 100%;
+            display: flex;
+            background-color: rgb(78,109,212);
+            align-items: center;
+            color: #fff;
+            justify-content: space-between;
+            border-radius: 2px;
+        }
+        .splashScreen_header button i{
+            color: #fff;
+            font-size: 36px;
+        }
+        .splashScreen .splashScreen_header amp-img{
+            opacity: 1;
+            margin: 0 25px;
+        }
+        article {
+            margin-top: 50px;
+        }
+        .splashScreen > amp-img{
+            opacity: 0.1;
+            position: fixed;
+        }
+        .splashScreen_text{
+            color: rgb(54,74,143);
+            z-index: 1;
+            position: absolute;
+            top: 30vh;
+            text-align: center;
+            padding: 0vh 8vw;
+            line-height: 1.2;
+            text-shadow: 0 1px #0000ffa8;
+        }
+        .splashScreen_text h1{
+            margin: 0 auto;
+        }
+        .splashScreen_text h3{
+            color: rgb(78,109,212);
+        }
+        .content{
+            overflow: hidden;
+            color: #333;
+        }
+        .content > amp-img{
+            position: relative;
+            background-color: #000;
+        }
+        amp-img .phrase{
+            position: absolute;
+            top: 45%;
+            color: #fff;
+            margin: 0;
+            width: 90%;
+            padding: 0;
+            z-index: 1000;
+            font-size: 20px;
+            text-shadow: none;
+        }
+        .box--caption{
+            color: #333;
+            padding: 10px;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        .box--caption h2{
+            color: rgb(78,109,212);
+            margin: 10px auto;
+        }
+        .box--caption li{
+            list-style-type: initial;
+            margin: 10px 20px;
+        }
+        .box--caption small{
+            color: rgb(54, 74, 143);
+        }
+        .footer{
+            background-color: rgba(78, 109, 212, 0.1);
+            color: #333;
+            padding: 15px 20px;
+        }
+        .footer__text{
+            line-height: 1.5;
+            text-align: center;
+        }
+        body::-webkit-scrollbar {
+            width: 0.2em;
+            opacity: 0;  
+        }
+         
+        body::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 1px rgba(0,0,0,0.3);
+            background-color: rgb(78,109,212);
+        }
+         
+        body::-webkit-scrollbar-thumb {
+          background-color: #fff;
+          outline: 1px solid #fff;
+          border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <amp-sidebar id="sidebar-left"
+        class="sidebar"
+        layout="nodisplay"
+        side="left">
+            <ul>
+                <li>
+                    <a href="#">
+                        <amp-img src="www-logo.png" width="40" height="40" alt="www"></amp-img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <amp-img src="facebook.png" width="40" height="40" alt="facebook"></amp-img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <amp-img src="instagram.png" width="40" height="40" alt="instagram"></amp-img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <amp-img src="twitter.png" width="75" height="50" alt="twitter"></amp-img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <amp-img src="whatsapp.png" width="100" height="80" alt="whatsapp"></amp-img>
+                    </a>
+                </li>
+            </ul>
+    </amp-sidebar>
+
+    <div class="splashScreen">
+        <header class="splashScreen_header">
+            <button on="tap:sidebar-left.toggle">
+                <i class="material-icons">menu</i>
+            </button>
+            <a href="index.html">
+                <amp-img src="logo1.png" width="40" height="40"></amp-img>
+            </a>
+        </header>
+        <amp-img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg" width="600" height="820" alt="world"></amp-img>
+
+        <div class="splashScreen_text">
+          <amp-img src="logo.png" width="150" height="150"></amp-img>
+          <h1>Mercurie</h1>
+          <h3>Accelerating Africa's digital economy</h3>
+        </div>
+    </div>
+    <hr>
+    <div class="content">
+        <amp-img src="img1.png" width="450" height="300">
+            <h2 class="phrase">Every business is a digital business. Most just don't know it yet</h2>
+        </amp-img>
+        
+        <h1>Mercurie Digital Starter Kit</h1>
+        <h3>A 5-IN-1 integrated digital solution bundle to establish businesses online and ensure presence across key customer digital touchpoints.</h3>
+    
+        <div class="content__integrations">
+            <amp-carousel 
+                height="680"
+                layout="fixed-height"
+                type="slides"
+                autoplay
+                delay = "9000">
+                <div>
+                    <div class="content__integrations__box">
+                        <amp-img src="img2.png"
+                            width="400"
+                            height="300"
+                            layout="responsive"
+                            alt="Website">
+                        </amp-img>
+                        <div class="box--caption">
+                          <h2>Website</h2>
+                          <span>Your business hub on the internet. Built with modern design and web infrastructure. Sites are optimised for speed, search engines and sales.</span>
+                          <ul>
+                              <li>Free Domain(.ng/.com.ng/org)</li>
+                              <li>SSL Security</li>
+                              <li>Fast Load Time</li>
+                              <li>1 Year Hosting</li>
+                              <li>Google Analytics</li>
+                              <li>Remarketing and Tracking Tags</li>
+                          </ul>
+                          <br>
+                          <small><i>Not an e-commerce site. Doesn't include payments</i></small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="content__integrations__box">
+                        <amp-img src="img3.png"
+                            width="400"
+                            height="300"
+                            layout="responsive"
+                            alt="Website">
+                        </amp-img>
+                        <div class="box--caption">
+                          <h2>Google My Business</h2>
+                          <span>Get found on Google Search and Google Maps when customers search online for your business or product and services you offer.</span>
+                          <ul>
+                              <li>Accelerated Profile Verification</li>
+                              <li>Upload Photos and Post Offers</li>
+                              <li>Showcase and Respond to Reviews</li>
+                              <li>Recieve Calls from Prospective Customers</li>
+                              <li>Direct customers to your Physical Store with Google Maps</li>
+                          </ul>
+                          <br>
+                          <small><i>Verification only available for businesses with a physical location.</i></small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="content__integrations__box">
+                        <amp-img src="img4.png"
+                            width="400"
+                            height="300"
+                            layout="responsive"
+                            alt="Website">
+                        </amp-img>
+                        <div class="box--caption">
+                          <h2>Whatsapp For Businesses</h2>
+                          <span>Whatsapp for business integration on your website and compatible platforms so you can speak directly with customers and prospects whenever and wherever they are on the globe.</span>
+                          <ul>
+                              <li>Customers can reach you via Whatsap from your website and your other digital platforms</li>
+                              <li>Auto-respond to client messages even when you're offline</li>
+                          </ul>
+                          <br>
+                          <small><i>You will be required to download and install a personal or business Whatsapp application that will be integrated across platforms</i></small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="content__integrations__box">
+                        <amp-img src="img5.png"
+                            width="400"
+                            height="300"
+                            layout="responsive"
+                            alt="Website">
+                        </amp-img>
+                        <div class="box--caption">
+                          <h2>Social Media Pages</h2>
+                          <span>Business pages on Facebook, Instagram and Twitter complete with cover art and profile pictures.</span>
+                          <ul>
+                              <li>Facebook, Instagram and Twitter business pages setup for your company</li>
+                          </ul>
+                          <br>
+                          <small><i>This is not core to the Digital Starter Kit offering and will only be developed for Clients that don't have the above mentioned assets.</i></small><br><br>
+                          <small><i>Our social media team will work with you on the setup for Instagram and Twitter accounts as they require SMS verification processes that must be forwarded to the Mercurie team at stipulated times</i></small>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="content__integrations__box">
+                        <amp-img src="img6.png"
+                            width="400"
+                            height="300"
+                            layout="responsive"
+                            alt="Website">
+                        </amp-img>
+                        <div class="box--caption">
+                          <h2>Digital Marketing Training</h2>
+                          <span>Now that your business is online and prominent across the key customer digital touchpoints, we'll train you to maximise the platforms so you can meet your marketing objectives.</span>
+                          <ul>
+                              <li>Practical Digital Marketing Masterclass covering: <br>- Driving sales and brand building online <br>- Content strategy for social media <br>- Facebook, Instagram, YouTube &amp; Google Search Advertising.</li>
+                          </ul>
+                          <br>
+                          <small><i>Trainings are delivered at the end of each month. Dates will be communicated in advance</i></small>
+                        </div>
+                    </div>
+                </div>
+            </amp-carousel>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer__text">
+            <span>www.mercurie.ng |</span><span><b> hello@mercurie.ng</b></span><br>
+            <span><b>+2349090110921</b></span><br>
+            <span>274A corporation drive, Dolphin estate, Ikoyi Lagos</span>
+        </div>
+    </div>
+
+</body>
+
+</html>
+<!-- 
+-footer: logo
+accelerating africa's digital economy
+www.mercurie.ng | hello@mercurie.ng
++2349090110921
+274A corporation drive, Dolphin estate, Ikoyi Lagos
+
+rgb(78,109,212) -->
