@@ -26,10 +26,6 @@
             outline: none;
             color: inherit;
         }
-        hr{
-            color: inherit;
-            margin: 20px;
-        }
         ul{
             padding: 0;
             margin: 0;
@@ -85,7 +81,7 @@
             position: relative;
         }
         .splashScreen_header {
-            height: 8vh;
+            height: 10vh;
             position: fixed;
             z-index: 1001;
             font-weight: 600;
@@ -135,14 +131,11 @@
             position: relative;
             background-color: #000;
         }
-        amp-img .phrase{
-            position: absolute;
-            top: 45%;
+        .phrase{
+            background-color: rgb(78, 109, 212);
             color: #fff;
             margin: 0;
-            width: 90%;
-            padding: 0;
-            z-index: 1000;
+            padding: 30px 10px;
             font-size: 20px;
             text-shadow: none;
         }
@@ -256,13 +249,12 @@
             <span>Accelerating Africa's digital economy</span>
         </div>
     </div>
-    <hr>
     <div class="content">
+        <h2 class="phrase">Every business is a digital business. Most just don't know it yet</h2>
         <amp-img 
             src="img1.png" 
             width="450" 
             height="300">
-            <h2 class="phrase">Every business is a digital business. Most just don't know it yet</h2>
         </amp-img>
         
         <h1>Mercurie Digital Starter Kit</h1>
@@ -274,7 +266,7 @@
                 layout="fixed-height"
                 type="slides"
                 autoplay
-                delay = "9000">
+                delay = "5000">
                 <div>
                     <div class="content__integrations__box">
                         <amp-img src="img2.png"
